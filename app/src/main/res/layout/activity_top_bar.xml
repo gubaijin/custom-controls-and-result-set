@@ -4,17 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.custom.top.TopBar
+    <com.custom.controls.top.TopBar
+        android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         topBar:leftImgIsShow="true"
         topBar:leftImg="@mipmap/top_bar_back"
-        topBar:leftText="222"
-        topBar:centerText="333"
-        topBar:rightText="555"
+        topBar:leftText="返回"
+        topBar:centerText="标题栏"
+        topBar:rightText="菜单"
         topBar:rightImgIsShow="true"
-        topBar:rightImg="@mipmap/top_bar_back"
-        android:background="#000000"
+        topBar:rightImg="@mipmap/top_bar_point"
+        android:background="#e65659"
        />
 
 </RelativeLayout>

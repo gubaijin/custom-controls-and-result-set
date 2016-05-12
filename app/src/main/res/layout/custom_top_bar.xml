@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#e65659">
 
+    <ImageView
+        android:id="@+id/img_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/top_bar_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="左"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/img_1"
+        android:layout_toEndOf="@+id/img_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中"
+        android:id="@+id/textView"
+        android:layout_centerInParent="true"/>
+
+    <ImageView
+        android:id="@+id/img_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/top_bar_point" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="右"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/img_2"
+        android:layout_toLeftOf="@+id/img_2" />
 </RelativeLayout>
