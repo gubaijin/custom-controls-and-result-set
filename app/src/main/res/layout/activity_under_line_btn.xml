@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:underLineBtn="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="单按钮" />
+
+        <com.custom.controls.button.UnderLineBtn
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            underLineBtn:checkedColor="#3366FF"
+            underLineBtn:isChecked="false"
+            underLineBtn:lineHeight="2dp"
+            underLineBtn:text="下划线按钮"
+            underLineBtn:textSize="14sp"
+            underLineBtn:unCheckedColor="#DDDDDD" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="双按钮，点击切换" />
+
+        <com.custom.controls.button.UnderLineBtn
+            android:id="@+id/under_line_btn_2_1"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            underLineBtn:checkedColor="#3366FF"
+            underLineBtn:isChecked="true"
+            underLineBtn:lineHeight="2dp"
+            underLineBtn:text="下划线按钮"
+            underLineBtn:textSize="14sp"
+            underLineBtn:unCheckedColor="#DDDDDD" />
+        <com.custom.controls.button.UnderLineBtn
+            android:id="@+id/under_line_btn_2_2"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            underLineBtn:checkedColor="#3366FF"
+            underLineBtn:isChecked="false"
+            underLineBtn:lineHeight="2dp"
+            underLineBtn:text="下划线按钮"
+            underLineBtn:textSize="14sp"
+            underLineBtn:unCheckedColor="#DDDDDD" />
+    </LinearLayout>
+</LinearLayout>

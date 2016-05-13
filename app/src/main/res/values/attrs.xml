@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 顶部导航栏 -->
     <declare-styleable name="topBar">
         <attr name="leftImg" format="reference|color" />
         <attr name="leftImgIsShow" format="boolean" />
@@ -19,5 +20,15 @@
         <attr name="rightImg" format="reference|color" />
         <attr name="rightImgIsShow" format="boolean" />
     </declare-styleable>
-    
+
+    <!-- 带下划线的按钮 -->
+    <declare-styleable name="underLineBtn">
+        <attr name="unCheckedColor" format="reference|color"/>
+        <attr name="checkedColor" format="reference|color"/>
+        <attr name="isChecked" format="boolean"/>
+        <attr name="lineHeight" format="dimension"/>
+        <attr name="lineWight" format="dimension"/>
+        <attr name="text" format="string"/>
+        <attr name="textSize" format="dimension"/>
+    </declare-styleable>
 </resources>
