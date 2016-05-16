@@ -22,9 +22,6 @@ public class UnderLineBtnActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), "左侧被点击", Toast.LENGTH_SHORT).show();
                 two_btn_1.setChecked(true);
                 two_btn_2.setChecked(false);
-
-                two_btn_1.invalidate();
-                two_btn_2.invalidate();
             }
         });
         two_btn_2.setOnClickListener(new View.OnClickListener() {
@@ -33,8 +30,6 @@ public class UnderLineBtnActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext(), "右侧被点击", Toast.LENGTH_SHORT).show();
                 two_btn_1.setChecked(false);
                 two_btn_2.setChecked(true);
-                two_btn_1.invalidate();
-                two_btn_2.invalidate();
             }
         });
     }

@@ -3,7 +3,6 @@ package com.custom.controls.button;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.drawable.StateListDrawable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.view.View;
@@ -17,11 +16,17 @@ import com.custom.utils.StringUtil;
  * Created by Kevin on 2016/5/13.
  */
 public class UnderLineBtn extends RelativeLayout {
+    /**
+     * 对应属性
+     */
     private float lineHeight, lineWeight, textSize;
     private int unCheckedColor, checkedColor;
     private boolean isChecked;
     private String text;
 
+    /**
+     * 控件
+     */
     private TextView textView;//文字
     private View view;//下划线
     private LayoutParams textViewParams, viewParams;
@@ -33,11 +38,12 @@ public class UnderLineBtn extends RelativeLayout {
     public UnderLineBtn(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
-    private StateListDrawable stateListDrawable;
     public UnderLineBtn(Context context, AttributeSet attrs) {
         super(context, attrs);
+        /**
+         * 获取自定义属性
+         */
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.underLineBtn);
-        stateListDrawable = (StateListDrawable) array.getDrawable(R.styleable.underLineBtn_isChecked);
         lineHeight = array.getDimension(R.styleable.underLineBtn_lineHeight, 1);
         lineWeight = array.getDimension(R.styleable.underLineBtn_lineWight, LayoutParams.MATCH_PARENT);
         textSize = array.getDimensionPixelSize(R.styleable.underLineBtn_textSize, 14);
@@ -45,9 +51,9 @@ public class UnderLineBtn extends RelativeLayout {
         checkedColor = array.getColor(R.styleable.underLineBtn_checkedColor, Color.BLUE);
         isChecked = array.getBoolean(R.styleable.underLineBtn_isChecked, false);
         text = array.getString(R.styleable.underLineBtn_text);
-        array.recycle();
+        array.recycle();//属性获取完之后及时回收
 
-
+        //给控件赋值
         textView = new TextView(context);
         textView.setId(StringUtil.generateViewId());
         view = new View(context);
@@ -61,30 +67,24 @@ public class UnderLineBtn extends RelativeLayout {
         textView.setText(text);
 //        textView.setTextSize(textSize);
         textView.getPaint().setTextSize(textSize);
-
+        //控件位置
         textViewParams = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
-        textViewParams.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        textViewParams.addRule(RelativeLayout.CENTER_IN_PARENT);
         textView.setGravity(Gravity.CENTER_HORIZONTAL);
         addView(textView, textViewParams);
 
         viewParams = new LayoutParams((int) lineWeight, (int) lineHeight);
-        viewParams.addRule(RelativeLayout.BELOW, textView.getId());
+        viewParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
         addView(view, viewParams);
-    }
-
-    private static final int[] CHECKED_STATE_SET = {android.R.attr.state_checked};
-    @Override
-    protected int[] onCreateDrawableState(int extraSpace) {
-        final int[] drawableState = super.onCreateDrawableState(extraSpace + 1);
-        if (isChecked) {
-            mergeDrawableStates(drawableState, CHECKED_STATE_SET);
-        }
-        return drawableState;
     }
 
     public void setChecked(boolean checked) {
         if (isChecked != checked) {
             isChecked = checked;
+            /**
+             * 保留改变后的显示，执行drawableStateChanged()中的变化
+             * 不执行本方法：drawableStateChanged()中设置的改变将被复原
+             */
             refreshDrawableState();
         }
     }
@@ -92,12 +92,13 @@ public class UnderLineBtn extends RelativeLayout {
     @Override
     protected void drawableStateChanged() {
         super.drawableStateChanged();
-        if(stateListDrawable != null){
+        //改变时的切换逻辑
             if(isChecked){
-                textView.setText("111");
+                textView.setTextColor(checkedColor);
+                view.setBackgroundColor(checkedColor);
             }else{
-                textView.setText("222");
+                textView.setTextColor(unCheckedColor);
+                view.setBackgroundColor(unCheckedColor);
             }
         }
-    }
 }

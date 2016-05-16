@@ -16,13 +16,13 @@
 
         <com.custom.controls.button.UnderLineBtn
             android:layout_width="100dp"
-            android:layout_height="45dp"
+            android:layout_height="40dp"
             underLineBtn:checkedColor="#3366FF"
             underLineBtn:isChecked="false"
             underLineBtn:lineHeight="2dp"
             underLineBtn:text="下划线按钮"
             underLineBtn:textSize="14sp"
-            underLineBtn:unCheckedColor="#DDDDDD" />
+            underLineBtn:unCheckedColor="#FF3300" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
