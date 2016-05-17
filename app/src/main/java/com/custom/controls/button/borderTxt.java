@@ -1,8 +1,6 @@
 package com.custom.controls.button;
 
 import android.content.Context;
-import android.graphics.drawable.shapes.OvalShape;
-import android.graphics.drawable.shapes.Shape;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
@@ -21,7 +19,7 @@ public class BorderTxt extends RelativeLayout{
     public BorderTxt(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 //http://tool.oschina.net/apidocs/apidoc?api=android/reference
-        Shape shape = new OvalShape();
-        shape.s
+/*        Shape shape = new OvalShape();
+        shape.s*/
     }
 }

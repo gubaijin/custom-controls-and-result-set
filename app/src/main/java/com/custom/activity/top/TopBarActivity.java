@@ -1,12 +1,12 @@
 package com.custom.activity.top;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.custom.R;
 import com.custom.controls.top.TopBar;
 
-public class TopBarActivity extends AppCompatActivity {
+public class TopBarActivity extends Activity {
 
     private TopBar topBar;
     @Override

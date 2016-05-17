@@ -1,13 +1,13 @@
 package com.custom.activity.button;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.custom.R;
 import com.custom.controls.button.UnderLineBtn;
 
-public class UnderLineBtnActivity extends AppCompatActivity {
+public class UnderLineBtnActivity extends Activity {
     private UnderLineBtn two_btn_1, two_btn_2;
 
     @Override

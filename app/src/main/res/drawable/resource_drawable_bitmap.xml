@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@mipmap/reasource_drawable_mn"
+    android:dither="true"
+    android:tileMode="mirror" />
+
+<!-- dither:设定是否使用图像抖动处理，会使绘制出来的图片颜色更加平滑和饱满，图像更加清晰 -->
+    <!-- 设置是否使用抗锯齿功能，会消耗较大资源，绘制图形速度会变慢。  -->
