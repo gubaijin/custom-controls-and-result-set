@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     android:orientation="vertical">
     <!-- bitmap -->
     <ImageView
@@ -24,7 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -36,15 +38,132 @@
         <ImageView
             android:layout_width="250dp"
             android:layout_height="100dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
             android:background="@mipmap/nine_patch" />
 
         <ImageView
             android:layout_width="250dp"
             android:layout_height="100dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
             android:background="@drawable/resource_drawable_nine_patch" />
     </LinearLayout>
+    <!-- layer list -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/resource_drawable_layer_list"
+        android:visibility="gone" />
+    <!-- selector -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/resource_drawable_selector"
+        android:text="selector标签学习"
+        android:visibility="gone" />
+    <!-- level list -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/levelList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/resource_drawable_level_list"
+            android:text="level list标签学习" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/level_1_"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="level=-1" />
+
+            <Button
+                android:id="@+id/level_0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="level=0" />
+
+            <Button
+                android:id="@+id/level_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="level=5" />
+
+            <Button
+                android:id="@+id/level_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="level=10" />
+
+            <Button
+                android:id="@+id/level_15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="level=15" />
+
+            <Button
+                android:id="@+id/level_20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="level=20" />
+
+            <Button
+                android:id="@+id/level_100"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="level=100" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- transition -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_transition"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:src="@drawable/resource_drawable_transition" />
+
+        <Button
+            android:id="@+id/btn_startTransition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始淡入淡出" />
+
+        <Button
+            android:id="@+id/btn_reverseTransition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="撤销淡入淡出" />
+    </LinearLayout>
+    <!-- inset -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/resource_drawable_inset"/>
+    <!-- clip -->
 </LinearLayout>

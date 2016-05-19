@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/resource_drawable_bitmap" />
+    <item android:top="40dp" android:left="40dp">
+        <bitmap android:src="@mipmap/reasource_drawable_mn" />
+    </item>
+    <item android:top="80dp" android:left="80dp">
+        <bitmap android:src="@mipmap/reasource_drawable_mn" />
+    </item>
+</layer-list>
