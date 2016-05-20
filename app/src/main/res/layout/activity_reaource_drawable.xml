@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue"
     android:orientation="vertical">
     <!-- bitmap -->
     <ImageView
@@ -164,6 +163,80 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/resource_drawable_inset"/>
+        android:background="@drawable/resource_drawable_inset"
+        android:visibility="gone" />
     <!-- clip -->
+    <ImageView
+        android:id="@+id/img_clip"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/resource_drawable_clip"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_clip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始裁剪"
+        android:visibility="gone" />
+    <!-- scale -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@mipmap/reasource_drawable_mn4" />
+
+        <ImageView
+            android:id="@+id/img_scale"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/resource_drawable_scale" />
+    </LinearLayout>
+    <!-- shape -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/resource_drawable_shape_rectangle"
+            android:gravity="center"
+            android:text="shape矩形，下面分别是椭圆，线，环" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/resource_drawable_shape_oval" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/resource_drawable_shape_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/resource_drawable_shape_ring" />
+        </RelativeLayout>
+
+    </LinearLayout>
 </LinearLayout>

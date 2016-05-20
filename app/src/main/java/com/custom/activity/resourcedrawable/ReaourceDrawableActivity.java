@@ -1,8 +1,11 @@
 package com.custom.activity.resourcedrawable;
 
 import android.app.Activity;
+import android.graphics.drawable.ClipDrawable;
+import android.graphics.drawable.ScaleDrawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,7 +15,8 @@ import com.custom.R;
 public class ReaourceDrawableActivity extends Activity implements View.OnClickListener {
     private Button levelList, level_1_, level_0, level_5, level_10, level_15, level_20, level_100;
     private Button btn_startTransition, btn_reverseTransition;
-    private ImageView img_transition;
+    private ImageView img_transition, img_clip, img_scale;
+    private Button btn_clip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,29 @@ public class ReaourceDrawableActivity extends Activity implements View.OnClickLi
                 drawable.reverseTransition(2000);
             }
         });
+
+        img_clip = (ImageView) findViewById(R.id.img_clip);
+        btn_clip = (Button) findViewById(R.id.btn_clip);
+        btn_clip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final ClipDrawable drawable_clip = (ClipDrawable) img_clip.getBackground();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        int level = drawable_clip.getLevel();
+                        if(level < 10000){
+                            drawable_clip.setLevel(drawable_clip.getLevel() + 100);
+                            new Handler().postDelayed(this, 100);
+                        }
+                    }
+                }, 1000);
+            }
+        });
+
+        img_scale = (ImageView) findViewById(R.id.img_scale);
+        ScaleDrawable scaleDrawable = (ScaleDrawable) img_scale.getDrawable();
+        scaleDrawable.setLevel(1);
     }
 
     @Override
