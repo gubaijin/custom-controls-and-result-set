@@ -31,4 +31,18 @@
         <attr name="text" format="string"/><!-- 中间文本内容 -->
         <attr name="textSize" format="dimension"/><!-- 中间字体大小 -->
     </declare-styleable>
+
+    <!-- 带边框点击背景变色的textview -->
+    <declare-styleable name="borderTxt">
+        <attr name="bt_unCheckedColor" format="reference|color"/><!-- 未选中时颜色 -->
+        <attr name="bt_checkedBgColor" format="reference|color"/><!-- 选中时背景颜色 -->
+        <attr name="bt_checkedTxtColor" format="reference|color"/><!-- 选中时文本颜色 -->
+        <attr name="bt_isChecked" format="boolean"/><!-- 是否选中 -->
+        <attr name="bt_strokeWight" format="dimension"/><!-- 描边的宽度 -->
+        <attr name="bt_cornersRadius" format="dimension"/><!-- 圆角度数 -->
+        <attr name="bt_text1" format="string"/><!-- 第一行文本内容 -->
+        <attr name="bt_textSize1" format="dimension"/><!-- 第一行字体大小 -->
+        <attr name="bt_text2" format="string"/><!-- 第二行文本内容 -->
+        <attr name="bt_textSize2" format="dimension"/><!-- 第二行字体大小 -->
+    </declare-styleable>
 </resources>

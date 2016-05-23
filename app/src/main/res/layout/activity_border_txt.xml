@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:borderTxt="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.custom.controls.button.BorderTxt
+        android:id="@+id/btt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        borderTxt:bt_text1="第一行"
+        borderTxt:bt_text2="第二行"></com.custom.controls.button.BorderTxt>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btt"
+        android:text="文字大小对比"
+        android:layout_centerHorizontal="true"
+        android:color="@drawable/custom_border_txt_color"
+        android:gravity="center"
+        android:textSize="14sp" />
+</RelativeLayout>

@@ -9,9 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.top.TopBarActivity"></activity>
-        <activity android:name=".activity.button.UnderLineBtnActivity">
-        </activity>
-        <activity android:name=".activity.resourcedrawable.ReaourceDrawableActivity">
+        <activity android:name=".activity.button.UnderLineBtnActivity"></activity>
+        <activity android:name=".activity.resourcedrawable.ReaourceDrawableActivity"></activity>
+        <activity android:name=".activity.button.BorderTxtActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
