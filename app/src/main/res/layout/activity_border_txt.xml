@@ -13,12 +13,13 @@
         borderTxt:bt_text2="第二行"></com.custom.controls.button.BorderTxt>
 
     <TextView
+        android:id="@+id/bbbb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btt"
         android:text="文字大小对比"
         android:layout_centerHorizontal="true"
-        android:color="@drawable/custom_border_txt_color"
+        android:textColor="@color/custom_border_txt_color"
         android:gravity="center"
         android:textSize="14sp" />
 </RelativeLayout>

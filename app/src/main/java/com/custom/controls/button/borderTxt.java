@@ -38,6 +38,7 @@ public class BorderTxt extends RelativeLayout {
 
     public BorderTxt(Context context, AttributeSet attrs) {
         super(context, attrs);
+        if (isInEditMode()) { return; }
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.borderTxt);
         unCheckedColor = array.getColor(R.styleable.borderTxt_bt_unCheckedColor, Color.GRAY);
         checkedBgColor = array.getColor(R.styleable.borderTxt_bt_checkedBgColor, Color.BLUE);
@@ -56,10 +57,10 @@ public class BorderTxt extends RelativeLayout {
         txt1.setId(StringUtil.generateViewId());
         txt1.setText(text1);
         txt1.setTextSize(textSize1);
-        txt1.setTextColor(getResources().getColor(R.drawable.custom_border_txt_color));
+        txt1.setTextColor(getResources().getColor(R.color.custom_border_txt_color));
         txt2.setText(text2);
         txt2.setTextSize(textSize2);
-        txt2.setTextColor(getResources().getColor(R.drawable.custom_border_txt_color));
+        txt2.setTextColor(getResources().getColor(R.color.custom_border_txt_color));
 
         relativeLayout = new RelativeLayout(context);
         relParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -83,13 +84,7 @@ public class BorderTxt extends RelativeLayout {
         this.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isFocused()){
-                    //已获得焦点
-                }else{
-                    requestFocus();//获得焦点
-                    txt1.requestFocus();
-                    txt2.requestFocus();
-                }
+//                requestFocus();
             }
         });
     }
